@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+/* ----- Layout ----- */
+
+body {
+    background-color: #f6c252;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: 0.7fr 5fr 5fr;
+    /*155px repeat(2, minmax(auto, 970px));*/
+    grid-template-rows: 40px 40px minmax(min-content, 700px) minmax(min-content, 10px);
+
+    gap: 5px;
+    grid-template-areas:
+        "nav nav nav"
+        "menu menu menu"
+        ". content content"
+        "footer footer footer";
+}
+
+/* ----- Internal links ------*/
+div#internalNav {
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin-top: 15px;
+    border-bottom: 0.1px solid #ffffff56;
+    letter-spacing: 2px;
+}
+
+#internalNav div a {
+    color: #ffffff;
+    text-shadow: 0 0 1.7px #e9a40e;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    text-decoration-thickness: 1.7px;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+#internalNav div a:hover {
+    text-decoration-thickness: 3.5px;
+    text-shadow: 0 7px 15px #ffffff;
+}
+
+#internalNav div a.active {
+    text-decoration: none;
+    text-shadow: 0 0 3px #b67d02;
+}
+
+/* ----- Content ------*/
+div#requestsBlocks {
+    grid-area: content;
+    width: 100%;
+    margin-left: 10px;
+    display: flex;
+    gap: 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: smaller;
+}
+
+div#requestsBlocks .block {
+    flex: 1;
+    min-width: 340px;
+    max-width: 340px;
+    max-height: 420px;
+    min-height: 420px;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 8px 16px #c4c4c4c0, 0 -3px #0f0f0f11;
+    background-color: #ffffff;
+}
+
+div.block div {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div.blockContainer div {
+    flex: 1;
+}
+
+.symbol {
+    width: 10%;
+    max-height: 30px;
+    min-height: 30px;
+}
+
+div.blockContainer img {
+    width: 30px;
+    height: 30px;
+}
+
+.customer {
+    min-width: 80%;
+    max-height: 2.7em;
+    overflow: hidden;
+    line-height: 1.3em;
+    font-weight: 800;
+}
+
+.date {
+    min-width: 75%;
+    max-height: 20px;
+    min-height: 20px;
+    margin-left: 10px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.time {
+    min-width: 35%;
+    max-height: 20px;
+    min-height: 20px;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.price,
+.type {
+    min-width: 55%;
+    max-height: 20px;
+    min-height: 20px;
+    margin-left: 10px;
+}
+
+.duration {
+    min-width: 55%;
+    max-height: 20px;
+    min-height: 20px;
+    margin-left: 10px;
+}
+
+.comment {
+    min-width: 70%;
+    max-height: 3.2em;
+    min-height: 120px;
+    overflow: hidden;
+    margin-left: 10px;
+    line-height: 1.3em;
+}
+
+button {
+    background-color: white;
+    color: black;
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.buttonAccept {
+    border: 2px solid #04AA6D;
+}
+
+.buttonReject {
+    border: 2px solid #aa0404;
+    float: left;
+}
+
+@media screen and (max-width: 850px) {
+    #internalNav {
+        font-size: 0.8em;
+        gap: 3px;
+    }
+}
+@media screen and (max-width: 680px) {
+    body {
+        grid-template-columns: 0.7fr 5fr 5fr;
+        /*155px repeat(2, minmax(auto, 970px));*/
+        grid-template-rows: 40px 50px minmax(min-content, 700px) minmax(min-content, 10px);
+    
+        gap: 5px;
+        grid-template-areas:
+            "nav nav"
+            "menu menu"
+            "content"
+            "footer footer";
+    }
+    #internalNav {
+        font-size: 0.7em;
+        gap: 1px;
+    }
+
+}

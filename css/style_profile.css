@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+/* ----- Layout ----- */
+
+body {
+    background-color: #f6c252;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 2fr 5fr 5fr 2fr;
+    grid-template-rows: 40px minmax(400px, 650px) minmax(min-content, 10px);
+    grid-template-areas:
+        "nav nav nav nav"
+        ". profile profile ."
+        "footer footer footer footer";
+}
+
+/* ----- Content ------*/
+div#content
+{
+    grid-area: profile;
+    width: 100%;
+    margin-left: 10px;
+    padding: 0px;
+    display: flex;
+    gap: 1px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: rgb(12, 12, 11);
+    justify-content: space-between;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.425), 0 17px 50px 0 rgba(0, 0, 0, 0.425);
+    background: linear-gradient(to right, #f6c252 22%, #ffffff 22%, #ffffff 100%);
+}
+
+div#content div {
+    display: inline-block;
+}
+
+form#content {
+    grid-area: profile;
+    width: 100%;
+    margin-left: 10px;
+    gap: 7px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #614509;
+    display: flex;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.425), 0 17px 50px 0 rgba(0, 0, 0, 0.425);
+    background: linear-gradient(to right, #f6c252 7%, #ffffff 10%, #ffffff 100%);
+}
+
+form#content >* {
+    margin-left: 15%;
+    margin-top: 10px;
+}
+
+#profileImage {
+    width: 25%;
+    text-align: right;
+}
+
+#profileImage img {
+    width: 70px;
+    height: 70px;
+    margin: 0px;
+}
+
+#headerData {
+    margin-left: 6px;
+}
+
+.headerContent {
+    width: 20%;
+    margin-left: 15px;
+    color: #614509;
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    text-decoration-thickness: 3px;
+}
+
+#dataContent {
+    padding-left: 5px;
+}
+
+div#content li {
+    background-image: url('../img/plume.PNG');
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    list-style: none;
+    padding: 2px 13px;
+}
+
+#content select,
+input {
+    border: 0px solid transparent;
+    border-color: #f6c252;
+    border-style: hidden;
+    padding: 6px;
+    border-radius: 2px 10px;
+    background-color: #f6c252;
+    accent-color: #f6c252;
+    margin-top: 2px;
+}
+
+#content textarea {
+    width: 80%;
+    height: 300px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border: 2px solid #f6c252;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+@media screen and (max-width: 1300px) {
+    #content textarea {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        grid-template-columns: 1fr 4fr 4fr 1fr;
+        grid-template-rows: 40px minmax(500px, 720px) minmax(min-content, 10px);
+        grid-template-areas:
+            "nav nav nav nav"
+            ". profile profile ."
+            "footer footer footer footer";
+    }
+    #content  h3{
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #content  h3{
+        font-size: 89%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    body {
+        grid-template-columns: 1fr 3fr 3fr 1fr;
+        grid-template-areas:
+            "nav nav nav nav"
+            ". profile profile ."
+            "footer footer footer footer";
+    }
+
+    #profileImage {
+        height: 15%;
+    }
+
+    #profileImage img {
+        width: 50px;
+        height: 50px;
+        margin: 6px;
+    }
+    #content  h3{
+        font-size: 70%;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        grid-template-columns: 0.5fr 3fr 3fr 0.5fr;
+        grid-template-areas:
+            "nav nav nav nav"
+            ". profile profile ."
+            "footer footer footer footer";
+    }
+}
+
+@media screen and (max-width: 590px) {
+    div#content,
+    form#content {
+        background: #ffffff;
+        font-size: 80%;
+    }
+
+    div#content li {
+        display: block;
+        background-image: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #content input,
+    #content select
+    {
+        font-size: 0.7em;
+    }
+
+    form#content >* {
+        margin-left: 30%;
+        margin-left: 10px;
+        gap: 3px;
+    }
+    #content textarea {
+        height: 170px;
+    }
+}

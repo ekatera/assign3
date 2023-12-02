@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolkförmedling Translandia</title>
+    <link rel="stylesheet" href="css/style_profile.css">
+    <link rel="stylesheet" href="css/style_common.css">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <a href="index.html">
+                Förfrågor
+            </a>
+        </div>
+        <div>
+            <a href="profile.html">
+                Profile
+            </a>
+        </div>
+        <div>
+            <a href="#" class="active">
+                Kontakta oss
+            </a>
+        </div>
+        <div>
+            <a href="rapport.html">
+                Rapport
+            </a>
+        </div>
+    </nav>
+
+    <form id="content">
+
+        <div class="contactContent">
+            <label>Vad gäller frågan:</label>
+            <select name="questions" id="question">
+                <option value="upcomingOrder">Kommande uppdrag</option>
+                <option value="accomplishedOrder">Utfört uppdrag</option>
+                <option value="billing">Fakturering</option>
+                <option value="vacation">Ledighet</option>
+                <option value="education">Utbildning</option>
+                <option value="other">Övrigt</option>
+            </select>
+        </div>
+        <div class="contactContent">
+            <label>Ange uppdrags nummer:</label>
+            <input type="text">
+        </div>
+
+        <div class="contactContent">
+            Hur ska vi kontakta dig?
+            <label>
+                <input type="checkbox" class="contactType" name="mail" value="coding" />
+                Mejl
+            </label>
+            <label>
+                <input type="checkbox" class="contactType" name="phone" value="coding" />
+                Telefon
+            </label>
+        </div>
+        <div class="contactContent">
+            <p>Beskriv kortfattat ditt ärende</p>
+            <textarea></textarea>
+        </div>
+    </form>
+
+    <footer>
+        Tolkförmedling
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport för U3 i Webbteknik 1</title>
+    <style>
+        html {
+            font-size: 16px
+        }
+
+        body {
+            background-color: #FFF;
+            color: #000;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            max-width: 80ch;
+            margin-left: 2ch;
+        }
+
+        header,
+        section {
+            border-bottom: 1px solid #999;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        h2 {
+            margin-bottom: 0.2em;
+        }
+
+        h3 {
+            margin-top: 0.2em;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid;
+            padding: 4px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #done {
+            background-color: green;
+        }
+
+        #not-done {
+            background-color: red;
+        }
+
+        #partly-done {
+            background-color: rgb(248, 161, 31);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Rapport för U3</h1>
+    </header>
+    <main>
+        <section>
+            <h2>1. Syfte och målgrupp</h2>
+            <p>I uppgiften skapades en webbplats för kontakttolkar som jobbar för en tolkförmedling.
+                Tolkförmedling har en separat webbplats för kunder som beställer uppdrag.
+            </p>
+            <p>Syfte med webbplatsen är att en tolk ska kunna se nya uppdragsförfrågningar från tolkförmedling, kolla på utförda uppdrag, hitta sina tolkuppgifter, kontakta tolkförmedlingen.
+            </p>
+            <p>Målgruppen består av verksamma kontakttolkar som dagligen arbetar med sina tolkuppdrag.
+            </p>
+            <h3>Användarnas behov</h3>
+            <ul>
+                <li>Se nya tolkförfrågor</li>
+                <li>Kunna svara på förfrågor</li>
+                <li>Se utförda uppdrag</li>
+                <li>Se egen tolkprofil</li>
+                <li>Kunna snabbt kontakta tolkförmedling i skriftligt form</li>
+            </ul>
+        </section>
+        <section>
+            <h2>2. Kravspecifikation</h2>
+            <!-- Kravspecifikationen ska vara utformad enligt Garretts modell på det sätt som visas i föreläsningar och laboration. -->
+            <h3>Innehåll</h3>
+            <ul>
+                <li>Nya uppdrag ska presenteras med typ av uppdrag, uppdragslängd, arvode, tid, plats, eventuell kommentar från uppdragsgivare</li>
+                <li>Telefon- och platsuppdrag ska skiljas åt genom ikon</li>
+                <li>Profilinformation med källspråk, kompetensnivå, telefonnummer, mejladress, schema och ledighet</li>
+            </ul>
+            <h3>Funktion</h3>
+            <!-- Skriv korta konkreta och mätbara krav som beskriver VAD användaren ska kunna göra. -->
+            <ul>
+                <li>Kunna ta an eller avslå nya uppdrag</li>
+                <li>Kunna se utförda uppdrag en månad tillbaka</li>
+                <li>Kunna sortera uppdrag efter uppdragstyp och kund</li>
+                <li>Kunna kontakta tolkförmedlingen</li>
+                <li>Kunna redigera eget schema och ledighet</li>
+            </ul>
+        </section>
+        <section>
+            <h2>3. Beskrivning av arbetet</h2>
+            <!-- Beskriv hur du arbetat med uppgiften. -->
+            <!-- För VG är det viktigt att du beskriver hur du använt Garretts modell och tar med referenser med sidnummer till boken, för att styrka det du tar upp i din text. Se mer info i rutan om referenser på uppgiftens webbsida. -->
+            <ul>
+                <li>
+                    Identifiera information och funktionalitet som ska finns på webbsidan
+                </li>
+                <li>
+                    Hitta lämpligt layout
+                </li>
+                <li>
+                    Implementera layout med hjälp av css. I uppgiften används grid och flex teknik.
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>4. Bilder</h2>
+            <!-- Beskriv i en punktlista vilka redigeringar du gjort av bilderna i ett bildredigeringsprogram, för att anpassa dem till hur du använder dem på din webbplats. -->
+            <p>Bilderna har redigerats i ett bildredigeringsprogram, där följande gjorts:</p>
+            <ul>
+                <li>Backgroundändring</li>
+                <li>Ändring av storlek</li>
+                <li>Spara i .png format</li>
+            </ul>
+        </section>
+        <section>
+            <h2>5. Utvärdering mot kravspecifikationen</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Krav</th>
+                        <th>Uppfyllnad</th>
+                        <th>Kommentar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nya uppdrag ska presenteras med typ av uppdrag, uppdragslängd, arvode, tid, plats, eventuell kommentar från uppdragsgivare</td>
+                        <td id="done">Uppfylld</td>
+                        <td>Nya uppdrag presenteras med alla attribut</td>
+                    </tr>
+                    <tr>
+                        <td>Telefon- och platsuppdrag ska skiljas åt genom ikon</td>
+                        <td id="done">Uppfyllt</td>
+                        <td>Med hjälp av 2 ikoner</td>
+                    </tr>
+                    <tr>
+                        <td>Profilinformation med källspråk, kompetensnivå, telefonnummer, mejladress, schema och ledighet</td>
+                        <td id="done">Uppfyllt</td>
+                        <td>På kontaktsidan kan man ta del av den informationen</td>
+                    </tr>
+                    <tr>
+                        <td>Kunna ta an eller avslå nya uppdrag</td>
+                        <td id="done">Uppfyllt</td>
+                        <td>Uppdraget kan accepteras/avslåss med hjälp av respektive</td>
+                    </tr>
+                    <tr>
+                        <td>Kunna se utförda uppdrag en månad tillbaka</td>
+                        <td id="partly-done">Delvist uppfyllt</td>
+                        <td>Utförda uppdrag skall öppnas genom lokala menyn, js krävas för att kunna presentera dem. Annars kommer sidan med utförda uppdrag se pricis på samma sätt som
+                            sidan med nya uppdrag. </td>
+                    </tr>
+                    <tr>
+                        <td>Se egen tolkprofil</td>
+                        <td id="done">Uppfyllt</td>
+                        <td>Kan nås via profilmeny. </td>
+                    </tr>
+                    <tr>
+                        <td>Kunna kontakta tolkförmedlingen</td>
+                        <td id="done">Uppfyllt</td>
+                        <td>Kan nås via kontaktmeny. </td>
+                    </tr>
+                    <tr>
+                        <td>Kunna redigera eget schema och ledighet</td>
+                        <td id="not-done">Uppfyllt</td>
+                        <td>En element måste utvecklas för detta. </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+    </main>
+</body>
+
+</html>

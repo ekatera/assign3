@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* ----- Grundstil för webbsidan ----- */
+
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html,
+body,
+nav,
+header,
+main,
+aside,
+footer,
+article,
+section,
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- Nav ----- */
+
+nav {
+    grid-area: nav;
+    margin: 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+    background-color: rgb(255, 255, 255);
+}
+
+nav div {
+    width: 150px;
+    margin-top: 3px;
+}
+
+nav div a {
+    color: black;
+    text-shadow:0 0 1.7px #e9a40e;
+    text-decoration: underline;
+    text-decoration-color: #f6c252;
+    text-decoration-thickness: 2.5px;
+}
+
+nav div a:hover {
+    text-decoration-thickness: 3.5px;
+    text-shadow:0 0 5px #e99f00;
+}
+
+nav div a.active {
+    text-decoration: none;
+    text-shadow:0 0 3px #b67d02;
+}
+
+/* ----- Footer ----- */
+
+footer {
+    grid-area: footer;
+    background-color: #ffffff;
+    padding: 3px;
+    color: antiquewhite;
+}
+@media screen and (max-width: 550px) {
+    nav {
+        font-size: 0.8em;
+        gap: 7px;
+    }
+}
